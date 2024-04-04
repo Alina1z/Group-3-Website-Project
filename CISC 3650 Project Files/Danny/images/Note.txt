@@ -1,0 +1,2 @@
+For consistency, all images should be cropped to the same size.
+As of the time of writing, images are sized at 400px * 300px.

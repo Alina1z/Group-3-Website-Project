@@ -1,0 +1,255 @@
+<html lang="en" data-bs-theme="dark">
+<head>
+	<title> Restuarant Finder </title>
+	<meta charset="utf-8"/>
+	<meta charset="keywords" content=""/>
+	<link href="base.css" type="text/css" rel="stylesheet"/>
+	<script src="main.js" type="text/javascript" defer></script>
+	<!-- Bootstrap 5.3 CDN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body> 
+	<div class="container row ps-4 ms-1 pe-1 me-4 pt-4">
+		<h1 class="text-center pb-3"> Restuarant Finder </h1>
+
+		<div class="col-md-4 px-2 py-2 mx-3 text-center text-emphasis bg-tertiary-subtle border border-secondary-subtle rounded-2">
+			<h4 class="pb-3"> Distance </h4>
+			<div class="row g-2">
+				<div class="row">
+					<label class="col-md-4 col-form-label text-end"> Location </label>
+					<div class="col-md-8">
+						<select id="locationSelector" class="form-select pb-2">
+							<option hidden value="unselected">Select</option>
+							<option selected value="brooklynCollege"> Brooklyn College </option>
+							<!-- <option value="brooklynCollege2"> Also Brooklyn College </option> -->
+						</select>
+					</div>
+				</div>
+				
+				<label class="col-md-3 col-form-label text-end"> Range </label>
+				<div class="col-md-9">
+					<div class="row pb-2 mx-auto">
+						<div class="col-md-6 text-start">
+							<button type="button" class="btn col-12 active" id="distanceAny" data-bs-toggle="button"> Any </button>
+						</div>
+					</div>
+					<div class="row pb-2 mx-auto">
+						<div class="col-md-6 text-start">
+							<button type="button" class="btn col-12" id="distance0.5" data-bs-toggle="button"> < 0.5 Mile </button>
+						</div>
+						<div class="col-md-6 text-start">
+							<button type="button" class="btn col-12" id="distance1" data-bs-toggle="button"> < 1 Mile </button>
+						</div>
+					</div>
+					<div class="row pb-2 mx-auto">
+						<div class="col-md-6 text-start">
+							<button type="button" class="btn col-12" id="distance1.5" data-bs-toggle="button"> < 1.5 Mile </button>
+						</div>
+						<div class="col-md-6 text-start">
+							<button type="button" class="btn col-12" id="distance2" data-bs-toggle="button"> < 2 Miles </button>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+			
+		<div class="col-md-3 px-2 py-2 mx-3 text-center text-emphasis bg-tertiary-subtle border border-secondary-subtle rounded-2">
+			<h4 class="pb-3"> Price </h4>
+			<div class="col-sm-12 text-center">
+				<div class="col-md-6 pb-2 mx-auto">
+					<button type="button" class="btn col-12 active" id="priceAny" data-bs-toggle="button"> Any </button>
+				</div>
+				<div class="col-md-6 pb-2 mx-auto">
+					<button type="button" class="btn col-12" id="priceTo10" data-bs-toggle="button"> < $ 10  </button>
+				</div>
+				<div class="col-md-6 pb-2 mx-auto">
+					<button type="button" class="btn col-12" id="priceTo20" data-bs-toggle="button"> < $ 20</button>
+				</div>
+				<div class="col-md-6 pb-2 mx-auto">
+					<button type="button" class="btn col-12" id="priceTo30" data-bs-toggle="button"> < $ 30 </button>
+				</div>
+			</div> 
+		</div>
+		
+		<div class="col-md-4 px-2 py-2 mx-3 text-center text-emphasis bg-tertiary-subtle border border-secondary-subtle rounded-2">
+			<h4 class="pb-3"> Exclusions </h4>
+			<div class="row g-2">
+			
+				<div class="row pb-2 mx-auto">
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12 active" id="excludeNone" data-bs-toggle="button"> None </button>
+					</div>
+				</div>
+				<div class="row pb-2 mx-auto">
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeEggs" data-bs-toggle="button"> Eggs </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeDairy" data-bs-toggle="button"> Dairy  </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludePeanuts" data-bs-toggle="button"> Peanuts  </button>
+					</div>
+				</div>
+				<div class="row pb-2 mx-auto">
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeWheat" data-bs-toggle="button"> Wheat </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeShellfish" data-bs-toggle="button"> Shellfish  </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeTreeNuts" data-bs-toggle="button"> Tree Nuts  </button>
+					</div>
+				</div>
+				<div class="row pb-2 mx-auto">
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeSesame"data-bs-toggle="button"> Sesame </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeSoy" data-bs-toggle="button"> Soy  </button>
+					</div>
+					<div class="col-md-4 text-start">
+						<button type="button" class="btn col-12" id="excludeFish" data-bs-toggle="button"> Fish  </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<h1 class="text-center py-3"> Results </h1>
+		<div class="row">
+		
+			<div class="col-md-4 mb-3 res" id="chipotle">
+				<div class="card">
+				<img src="images/chipotle.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Chipotle<br>2166 Nostrand Ave, Brooklyn, NY 11210<br>[Mexican]</h5>
+						<p class="card-text">Fast-food chain offering Mexican fare, including design-your-own burritos, tacos & bowls.</p>
+						<a href="https://locations.chipotle.com/ny/brooklyn/2166-nostrand-ave" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="mcdonalds">
+				<div class="card">
+					<img src="images/mcdonalds.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">McDonald's<br>2154 Nostrand Ave, Brooklyn, NY 11210<br>[Fast Food]</h5>
+						<p class="card-text">Classic, long-running fast-food chain known for its burgers & fries.</p>
+						<a href="https://www.mcdonalds.com/us/en-us.html" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="burgerking">
+				<div class="card">
+				<img src="images/burgerking.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Burger King<br>13 Hillel Pl, Brooklyn, NY 11210<br>[Fast Food]</h5>
+						<p class="card-text">Well-known fast-food chain serving grilled burgers, fries & shakes.</p>
+						<a href="https://www.bk.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="starbucks">
+				<div class="card">
+					<img src="images/starbucks.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Starbucks<br>33-42 Hillel Pl, Brooklyn, NY 11210<br>[Coffee shop]</h5>
+						<p class="card-text">Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.</p>
+						<a href="https://www.starbucks.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="pizzahut">
+				<div class="card">
+				<img src="images/pizzahut.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Pizza Hut<br>37 Hillel Pl, Brooklyn, NY 11210<br>[Pizza]</h5>
+						<p class="card-text">Popular delivery, carry-out & dine-in chain known for pizza, wings & pasta, plus sides & desserts.</p>
+						<a href="https://www.pizzahut.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="subsational">
+				<div class="card">
+					<img src="images/subsational.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Subsational<br>2901 Campus Road, Brooklyn, NY 11210<br>[Kosher]</h5>
+						<p class="card-text">Specializes in sandwiches, burgers, chicken, wraps, soups, and salads.</p>
+						<a href="https://subseats.com/restaurant-detail/475" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="tasteofthecityfreshgrill">
+				<div class="card">
+					<img src="images/tasteofthecity.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Taste Of The City Fresh Grill<br>1368 Flatbush Ave, Brooklyn, NY 11210<br>[Haitian]</h5>
+						<p class="card-text">Specializes in Haitian cuisine and comfort food.</p>
+						<a href="http://tasteofthecityny.mobile-webview1.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="mirna">
+				<div class="card">
+					<img src="images/mirnas.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Mirna's Pupuseria<br>1350 Flatbush Ave, Brooklyn, NY 11210<br>[Salvadoran]</h5>
+						<p class="card-text">Specializes in classic Salvadoran cuisine.</p>
+						<a href="http://ordermirnaspupuseria.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="footprintscafe">
+				<div class="card">
+					<img src="images/footprintscafe.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Footprints Cafe Express<br>1377 Flatbush Ave, Brooklyn, NY 11210<br>[Caribbean]</h5>
+						<p class="card-text">Caribbean-inspired cuisine with signature Rasta Pasta, plus a full bar & entertainment.</p>
+						<a href="http://footprintscafenyc.com/flatbush/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="texs">
+				<div class="card">
+					<img src="images/texs.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Tex’s Chicken & Burgers<br>1148 Flatbush Ave, Brooklyn, NY 11226<br>[Chicken]</h5>
+						<p class="card-text">Fast food chain specializing in fried chicken and sandwiches.</p>
+						<a href="https://eattexs.com/locations/1148-flatbush-ave-brooklyn-ny-11226" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 mb-3 res" id="bonafini">
+				<div class="card">
+					<img src="images/bonafini.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Bonafini<br>663 Flatbush Ave, Brooklyn, NY 11225<br>[Italian]</h5>
+						<p class="card-text">Casual Italian restaurant serving fresh pasta, pizza, wine & cocktails.</p>
+						<a href="https://www.bonafinibk.com/" class="btn btn-outline-primary">Website</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+	<footer>
+		
+	</footer>
+	
+</body>
+</html>
