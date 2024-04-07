@@ -48,7 +48,10 @@ section {
 }
 
 .restaurant {
-    width: 300px;
+	display: flex;
+    align-items: flex-start;
+	gap: 20px;
+    width: 100%;
     margin: 15px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -57,18 +60,26 @@ section {
 }
 
 .restaurant img {
-    max-width: 200px;
-    height: auto;
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	width: 30%;
 }
 
 .restaurant-info h3 {
-    margin-top: 0;
+	text-align: left;
+	padding-left: 20px;
     font-size: 18px;
 }
 
 .restaurant-info p {
-    margin-bottom: 0;
+	text-align: left;
+	padding-left: 20px;
     font-size: 14px;
+}
+
+#recommended {
+	text-align: center;
 }
 
 /* Style for small logos */
