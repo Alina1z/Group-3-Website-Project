@@ -1,0 +1,90 @@
+/* CSS Styles */
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant {
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.restaurant img {
+    max-width: 200px;
+    height: auto;
+}
+
+.restaurant-info h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.restaurant-info p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* Style for small logos */
+.small-logo {
+    width: 100px; /* Adjust size as needed */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+/* CSS Styles */
+
+#restaurants {
+    text-align: right; /* Align images to the right */
+}
+
