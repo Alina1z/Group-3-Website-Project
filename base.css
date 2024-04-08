@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+html {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.container {
+    background-color: #f7f7f7;
+}

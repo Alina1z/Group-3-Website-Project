@@ -1,0 +1,115 @@
+/* CSS Styles */
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant {
+	display: flex;
+    align-items: flex-start;
+	gap: 20px;
+    width: 100%;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.restaurant img {
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	width: 30%;
+}
+
+.restaurant-info h3 {
+	text-align: left;
+	padding-left: 20px;
+    font-size: 18px;
+}
+
+.restaurant-info p {
+	text-align: left;
+	padding-left: 20px;
+    font-size: 14px;
+}
+
+#recommended {
+	text-align: center;
+}
+
+/* Style for small logos */
+.small-logo {
+    width: 100px; /* Adjust size as needed */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+/* CSS Styles */
+
+#restaurants {
+    text-align: right; /* Align images to the right */
+}
+
+#searchButton {
+	margin-right: 20px;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: white;
+	background-color: green;
+	border: 1px;
+	border-radius: 15px;
+}
